@@ -17,7 +17,8 @@ I wrote a little about this topic in Polish on my [blog](http://prondzyn.com/201
 7. `cd octopress`
 8. `rake generate` 
 9. `rake preview`
-10. Open your favourite browser at `http://localhost:4000` to preview your page
+10. Open your favourite browser at [http://localhost:4000](http://localhost:4000) to preview your page
+11. Have fun! :)
 
 ### Credits
 
