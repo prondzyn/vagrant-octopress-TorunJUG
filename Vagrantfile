@@ -22,13 +22,15 @@ Vagrant.configure("2") do |config|
   # configuration for VirtualBox provider
   config.vm.provider :virtualbox do |vb|
 
+    vb.name = "torun.jug.pl"
+
     #fix for issue with symbolic links in shared folders
     vb.customize ["setextradata", :id, "VBoxInternal2/SharedFoldersEnableSymlinksCreate/v-root", "1"]
 
     # memory settings
-    vb.customize ["modifyvm", :id, "--memory", 1024]
+    vb.memory = 1024
     # CPU settings
-    vb.customize ["modifyvm", :id, "--cpus", 2]
+    vb.cpus = 2
 
     # this two settings fixed my problem with network slowness between local and virtual machine
     vb.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
