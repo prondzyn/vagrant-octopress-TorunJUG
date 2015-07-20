@@ -28,3 +28,9 @@ sudo chown -Rf vagrant $HOME/.rbenv
 # bundler suggests to do not run it as root, because it won't work properly
 sudo su - vagrant -c "rbenv rehash && cd $HOME/octopress/ && gem install bundler"
 sudo su - vagrant -c "cd $HOME/octopress/ && bundle install"
+
+rm "$HOME/postinstall.sh"
+
+echo "alias preview='cd $HOME/octopress; rake preview'" >> $HOME/.bashrc
+echo "alias generate='cd $HOME/octopress; rake generate'" >> $HOME/.bashrc
+echo "alias deploy='cd $HOME/octopress; rake deploy'" >> $HOME/.bashrc
