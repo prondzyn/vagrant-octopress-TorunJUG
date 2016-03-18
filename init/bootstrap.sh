@@ -10,7 +10,7 @@ echo $TIMEZONE | sudo tee /etc/timezone && dpkg-reconfigure --frontend nonintera
 
 sudo apt-get install -y git make
 
-git clone https://github.com/sstephenson/rbenv.git $HOME/.rbenv
+git clone git://github.com/sstephenson/rbenv.git $HOME/.rbenv
 
 echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> $HOME/.profile
 echo 'eval "$(rbenv init -)"' >> $HOME/.profile
@@ -18,7 +18,7 @@ echo 'eval "$(rbenv init -)"' >> $HOME/.profile
 echo 'export LC_ALL=en_US.UTF-8' >> $HOME/.profile
 echo 'export LANG=en_US.UTF-8' >> $HOME/.profile
 
-git clone https://github.com/sstephenson/ruby-build.git $HOME/.rbenv/plugins/ruby-build
+git clone git://github.com/sstephenson/ruby-build.git $HOME/.rbenv/plugins/ruby-build
 
 $HOME/.rbenv/bin/rbenv install $RUBY_VERSION
 $HOME/.rbenv/bin/rbenv local $RUBY_VERSION
